@@ -1,7 +1,7 @@
-FROM alpine:3.11
+FROM alpine:3.12
 LABEL maintainer "DI GREGORIO Nicolas <nicolas.digregorio@gmail.com>"
 
-ARG RADARR_VERSION="0.2.0.1480"
+ARG RADARR_VERSION="0.2.0.1504"
 
 ### Environment variables
 ENV LANG='en_US.UTF-8' \
@@ -47,6 +47,8 @@ RUN set -x && \
     tar xzf /tmp/radarr.tar.gz -C /opt && \
     echo "export XDG_CONFIG_HOME='${XDG_CONFIG_HOME}'" >> /etc/profile.d/docker-xdg.sh && \
     chmod 0755 /opt/Radarr && \
+    find /opt/Radarr -type d -exec chmod 0755 {} \; && \
+    find /opt/Radarr -type f -exec chmod 0644 {} \; && \
     apk del --no-cache --purge \
       build-deps  \
     && \
