@@ -1,7 +1,7 @@
-FROM alpine:3.12
+FROM alpine:3.13
 LABEL maintainer "DI GREGORIO Nicolas <nicolas.digregorio@gmail.com>"
 
-ARG RADARR_VERSION="0.2.0.1504"
+ARG RADARR_VERSION="3.0.2.4369"
 
 ### Environment variables
 ENV LANG='en_US.UTF-8' \
@@ -40,7 +40,6 @@ RUN set -x && \
     apk add --no-cache --repository http://nl.alpinelinux.org/alpine/edge/testing --virtual=run-deps-testing \
       mono \
     && \
-    mozroots --import --sync && \
     cert-sync /etc/ssl/certs/ca-certificates.crt && \
     ln -s /usr/lib/libmono-native.so.0 /usr/lib/libmono-native.so && \
     curl -SsL https://github.com/Radarr/Radarr/releases/download/v${RADARR_VERSION}/Radarr.develop.${RADARR_VERSION}.linux.tar.gz -o /tmp/radarr.tar.gz && \
