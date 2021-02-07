@@ -35,6 +35,7 @@ RUN set -x && \
       icu \
       mediainfo \
       libintl \
+      sqlite-libs \
       su-exec \
       unrar \
       unzip \
