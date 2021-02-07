@@ -34,7 +34,7 @@ RUN set -x && \
       gcompat \
       icu \
       mediainfo \
-      musl-libintl \
+      libintl \
       su-exec \
       unrar \
       unzip \
