@@ -38,7 +38,7 @@ RUN set -x && \
       unrar \
       unzip \
     && \
-    curl -SsL https://github.com/Radarr/Radarr/releases/download/v${RADARR_VERSION}/Radarr.master.${RADARR_VERSION}.linux-core-x64.tar.gz -o /tmp/radarr.tar.gz && \
+    curl -SsL https://github.com/Radarr/Radarr/releases/download/v${RADARR_VERSION}/Radarr.master.${RADARR_VERSION}.linux-musl-core-x64.tar.gz -o /tmp/radarr.tar.gz && \
     tar xzf /tmp/radarr.tar.gz -C /opt && \
     echo "export XDG_CONFIG_HOME='${XDG_CONFIG_HOME}'" >> /etc/profile.d/docker-xdg.sh && \
     chmod 0755 /opt/Radarr && \
