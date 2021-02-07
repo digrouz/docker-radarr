@@ -40,8 +40,8 @@ RUN set -x && \
     apk add --no-cache --repository http://nl.alpinelinux.org/alpine/edge/testing --virtual=run-deps-testing \
       mono \
     && \
-    cert-sync /etc/ssl/certs/ca-certificates.crt && \
     ln -s /usr/lib/libmono-native.so.0 /usr/lib/libmono-native.so && \
+    cert-sync /etc/ssl/certs/ca-certificates.crt && \
     curl -SsL https://github.com/Radarr/Radarr/releases/download/v${RADARR_VERSION}/Radarr.develop.${RADARR_VERSION}.linux.tar.gz -o /tmp/radarr.tar.gz && \
     tar xzf /tmp/radarr.tar.gz -C /opt && \
     echo "export XDG_CONFIG_HOME='${XDG_CONFIG_HOME}'" >> /etc/profile.d/docker-xdg.sh && \
