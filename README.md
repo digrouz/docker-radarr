@@ -1,3 +1,5 @@
+[![auto-update-workflow](https://github.com/digrouz/docker-radarr/actions/workflows/auto-update.yml/badge.svg)](https://github.com/digrouz/docker-radarr/actions/workflows/auto-update.yml)
+
 # docker-radarr
 Installs Radarr into a Linux Container
 
