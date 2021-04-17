@@ -40,7 +40,6 @@ RUN set -x && \
     apk add --no-cache --repository http://nl.alpinelinux.org/alpine/edge/testing --virtual=run-deps-testing \
       mono \
     && \
-    ln -s /usr/lib/libmono-native.so.0 /usr/lib/libmono-native.so && \
     cert-sync /etc/ssl/certs/ca-certificates.crt && \
     curl -SsL https://github.com/Radarr/Radarr/releases/download/v${RADARR_VERSION}/Radarr.master.${RADARR_VERSION}.linux.tar.gz -o /tmp/radarr.tar.gz && \
     tar xzf /tmp/radarr.tar.gz -C /opt && \
