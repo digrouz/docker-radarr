@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-RADARR_URL="https://api.github.com/repos/Radarr/Radarr/tags"
+RADARR_URL="https://radarr.servarr.com/v1/update/master/changes?os=linux"
 
-FULL_LAST_VERSION=$(curl -SsL ${RADARR_URL} | jq .[0].name -r )
-LAST_VERSION="${FULL_LAST_VERSION:1}"
+LAST_VERSION=$(curl -SsL ${RADARR_URL} | jq .[0].version -r )
 
 sed -i -e "s|RADARR_VERSION='.*'|RADARR_VERSION='${LAST_VERSION}'|" Dockerfile*
 
