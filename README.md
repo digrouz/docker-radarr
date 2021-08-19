@@ -11,6 +11,7 @@ Installs Radarr into a Linux Container
 ## Tag
 Several tag are available:
 * latest: see alpine-core
+* alpine: see alpine-core
 * alpine-core: [Dockerfile_alpine-core: .net core version](https://github.com/digrouz/docker-radarr/blob/master/Dockerfile_alpine-core)
 * alpine-mono: [Dockerfile_alpine-mono: .net mono version](https://github.com/digrouz/docker-radarr/blob/master/Dockerfile_alpine-mono)
 
