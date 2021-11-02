@@ -5,7 +5,6 @@
 # docker-radarr
 Installs Radarr into a Linux Container
 
-
 ![Radarr](https://raw.githubusercontent.com/Radarr/Radarr/aphrodite/Logo/128.png)
 
 ## Tag
