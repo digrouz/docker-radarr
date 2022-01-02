@@ -37,8 +37,6 @@ RUN set -x && \
       libintl \
       sqlite-libs \
       su-exec \
-      unrar \
-      unzip \
     && \
     curl -SsL https://github.com/Radarr/Radarr/releases/download/v${RADARR_VERSION}/Radarr.master.${RADARR_VERSION}.linux-musl-core-x64.tar.gz -o /tmp/radarr.tar.gz && \
     tar xzf /tmp/radarr.tar.gz -C /opt && \
