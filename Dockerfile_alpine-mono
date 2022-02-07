@@ -1,7 +1,7 @@
 FROM alpine:3.15.0
 LABEL maintainer "DI GREGORIO Nicolas <nicolas.digregorio@gmail.com>"
 
-ARG RADARR_VERSION='3.2.2.5080'
+ARG RADARR_VERSION='4.0.4.5922'
 
 ### Environment variables
 ENV LANG='en_US.UTF-8' \
