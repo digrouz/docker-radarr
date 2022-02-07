@@ -49,11 +49,3 @@ jobs:
           file: Dockerfile_alpine-core
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/radarr:alpine-core
-      -
-        name: Build and push tag alpine
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          file: Dockerfile_alpine-mono
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/radarr:alpine-mono
