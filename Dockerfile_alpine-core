@@ -44,7 +44,7 @@ RUN set -x && \
     chmod 0755 /opt/Radarr && \
     find /opt/Radarr -type d -exec chmod 0755 {} \; && \
     find /opt/Radarr -type f -exec chmod 0644 {} \; && \
-    chmod 0755 /opt/Radarr/Radarr && \
+    chmod 0755 /opt/Radarr/{Radarr,ffprobe,createdump} && \
     apk del --no-cache --purge \
       build-deps  \
     && \
