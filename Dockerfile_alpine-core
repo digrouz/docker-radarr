@@ -1,7 +1,7 @@
 FROM digrouz/alpine-s6:latest
 LABEL maintainer "DI GREGORIO Nicolas <nicolas.digregorio@gmail.com>"
 
-ARG RADARR_VERSION='4.2.4.6635'
+ARG RADARR_VERSION='4.3.2.6857'
 
 ### Environment variables
 ENV LANG='en_US.UTF-8' \
