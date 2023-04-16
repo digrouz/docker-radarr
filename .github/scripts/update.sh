@@ -4,7 +4,9 @@ RADARR_URL="https://radarr.servarr.com/v1/update/master/changes?runtime=netcore&
 
 LAST_VERSION=$(curl -SsL ${RADARR_URL} | jq .[0].version -r )
 
-sed -i -e "s|RADARR_VERSION='.*'|RADARR_VERSION='${LAST_VERSION}'|" Dockerfile*
+if [ "${LAST_VERSION}" ]; then
+  sed -i -e "s|RADARR_VERSION='.*'|RADARR_VERSION='${LAST_VERSION}'|" Dockerfile*
+fi
 
 if output=$(git status --porcelain) && [ -z "$output" ]; then
   # Working directory clean
