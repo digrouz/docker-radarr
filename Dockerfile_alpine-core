@@ -1,5 +1,5 @@
 FROM digrouz/alpine-s6:latest
-LABEL maintainer "DI GREGORIO Nicolas <nicolas.digregorio@gmail.com>"
+LABEL maintainer="DI GREGORIO Nicolas <nicolas.digregorio@gmail.com>"
 
 ARG RADARR_VERSION='5.14.0.9383'
 
