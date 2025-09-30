@@ -1,14 +1,17 @@
+# docker-radarr
+
 [![auto-update](https://github.com/digrouz/docker-radarr/actions/workflows/auto-update.yml/badge.svg)](https://github.com/digrouz/docker-radarr/actions/workflows/auto-update.yml)
 [![dockerhub](https://github.com/digrouz/docker-radarr/actions/workflows/dockerhub.yml/badge.svg)](https://github.com/digrouz/docker-radarr/actions/workflows/dockerhub.yml)
 ![Docker Pulls](https://img.shields.io/docker/pulls/digrouz/radarr)
 
-# docker-radarr
 Installs Radarr into a Linux Container
 
 ![Radarr](https://raw.githubusercontent.com/Radarr/Radarr/aphrodite/Logo/128.png)
 
 ## Tag
+
 Several tag are available:
+
 * latest: see alpine-core
 * alpine: see alpine-core
 * alpine-core: [Dockerfile_alpine-core: .net core version](https://github.com/digrouz/docker-radarr/blob/master/Dockerfile_alpine-core)
@@ -17,9 +20,10 @@ Several tag are available:
 
 Radarr is an independent fork of Sonarr reworked for automatically downloading movies via Usenet and BitTorrent. The project was inspired by other Usenet/BitTorrent movie downloaders such as CouchPotato.
 
-https://radarr.videos
+[https://radarr.videos](https://radarr.videos)
 
 ## Usage
+
     docker create --name=radarr \
       -v /etc/localtime:/etc/localtime:ro \
       -v <path to config>:/config \
@@ -47,7 +51,9 @@ This variable is not mandatory and specifies if the container has to launch soft
 
 ## Notes
 
-* The docker entrypoint can upgrade operating system at each startup. To enable this feature, just add `-e DOCKUPGRADE=1` at container creation.
+* This container is built using [s6-overlay](https://github.com/just-containers/s6-overlay)
+* The docker entrypoint can upgrade operating system at each startup. To enable this feature, just add `-e AUTOUPGRADE=1` at container creation.
+* An helm chart is available of in the [chart folder](https://github.com/digrouz/docker-radarr/tree/master/chart) with an example [values.yaml](https://github.com/digrouz/docker-radarr/tree/master/chart/values.yaml)
 
 ## Issues
 
