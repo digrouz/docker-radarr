@@ -152,5 +152,18 @@ persistence:
       ## If not set, the default NFS path will be used
       ##
       path: ""
+  ## Extra volumes to be mounted into the Pod
+  ## Example:
+  ## extraVolumes:
+  ##   - name: my-config
+  ##     configMap:
+  ##       name: my-configmap
+  extraVolumes: []
+  ## Extra volumeMounts to add to the transmission container
+  ## Example:
+  ## extraVolumeMounts:
+  ##   - name: my-config
+  ##     mountPath: /etc/my-config
+  extraVolumeMounts: []
 extraObjects: []
 

@@ -29,6 +29,9 @@ spec:
               name: radarr-downloads
             - mountPath: /movies
               name: radarr-movies
+{{- if .Values.persistence.extraVolumeMounts }}
+{{- toYaml .Values.persistence.extraVolumeMounts | nindent 12 }}
+{{- end }}
           env:
             - name: GID
               value: "{{ .Values.service.gid }}"
@@ -72,3 +75,6 @@ spec:
           {{- else }}
           emptyDir: { }
           {{- end }}
+{{- if .Values.persistence.extraVolumes }}
+{{- toYaml .Values.persistence.extraVolumes | nindent 8 }}
+{{- end }}
