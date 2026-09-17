@@ -2,7 +2,7 @@
 
 RADARR_URL="https://radarr.servarr.com/v1/update/master/changes?runtime=netcore&os=linux"
 
-LAST_VERSION=$(curl -SsL ${RADARR_URL} | jq .[0].version -r )
+LAST_VERSION=$(curl -SsL ${RADARR_URL} | jq -r '.[0].version' )
 
 if [ "${LAST_VERSION}" ]; then
   sed -i -e "s|RADARR_VERSION='.*'|RADARR_VERSION='${LAST_VERSION}'|" Dockerfile*
